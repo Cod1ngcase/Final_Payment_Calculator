@@ -3,31 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Cruise Date Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-        .result {
-            margin-top: 10px;
-            padding: 10px;
-            background: #ddd;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -38,13 +15,13 @@
         <label for="cruiseLength">Cruise Length:</label>
         <select id="cruiseLength">
             <option value="">Select length</option>
-            <option value="76">2-Night</option>
-            <option value="76">3-Night</option>
-            <option value="76">4-Night</option>
-            <option value="76">5-Night</option>
-            <option value="91">6-Night</option>
-            <option value="91">7-Night</option>
-            <option value="121">10-Night</option>
+            <option value="2">2-Night</option>
+            <option value="3">3-Night</option>
+            <option value="4">4-Night</option>
+            <option value="5">5-Night</option>
+            <option value="6">6-Night</option>
+            <option value="7">7-Night</option>
+            <option value="10">10-Night</option>
         </select>
         
         <button onclick="calculateDate()">Calculate</button>
@@ -52,23 +29,6 @@
         <div id="result" class="result" style="display: none;"></div>
     </div>
 
-    <script>
-        function calculateDate() {
-            let cruiseDate = document.getElementById("cruiseDate").value;
-            let cruiseLength = document.getElementById("cruiseLength").value;
-            let resultDiv = document.getElementById("result");
-            
-            if (!cruiseDate || !cruiseLength) {
-                alert("Please select both cruise date and length.");
-                return;
-            }
-            
-            let date = new Date(cruiseDate);
-            date.setDate(date.getDate() - parseInt(cruiseLength));
-            
-            resultDiv.innerHTML = "<strong>Result Date:</strong> " + date.toISOString().split('T')[0];
-            resultDiv.style.display = "block";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

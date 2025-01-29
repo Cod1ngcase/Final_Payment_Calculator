@@ -10,7 +10,11 @@ function calculateDate() {
     
     let date = new Date(cruiseDate);
     date.setDate(date.getDate() - parseInt(cruiseLength));
+
+    let formattedDate = (date.getMonth() + 1).toString().padStart(2, '0') + "/" +
+                        date.getDate().toString().padStart(2, '0') + "/" +
+                        date.getFullYear();
     
-    resultDiv.innerHTML = "<strong>Final Payment Due:</strong> " + date.toISOString().split('T')[0];
+    resultDiv.innerHTML = "<strong>Final Payment Due:</strong> " + formattedDate;
     resultDiv.style.display = "block";
 }

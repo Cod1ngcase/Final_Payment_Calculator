@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cruise Date Calculator</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Date Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-<h1>Cruise Date Calculator</h1>
-<label for="cruiseDate">Enter your cruise date:</label>
-<input type="date" id="cruiseDate" required>
-<label for="cruiseLength">Select Cruise Length (in nights):</label>
-<select id="cruiseLength" required>
-<option value="2">2 Nights</option>
-<option value="3">3 Nights</option>
-<option value="4">4 Nights</option>
-<option value="5">5 Nights</option>
-<option value="6">6 Nights</option>
-<option value="7">7 Nights</option>
-<option value="10">10 Nights</option>
-</select>
-<button onclick="calculateDates()">Calculate</button>
-<div id="results">
-<p id="result1"></p>
-<p id="result2"></p>
-<p id="result3"></p>
-</div>
-</div>
- 
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>Cruise Date Calculator</h1>
+        <form>
+            <label for="cruise-date">Enter your cruise date:</label>
+            <input type="date" id="cruise-date" name="cruise-date">
+            <br>
+            <label for="cruise-length">Select Cruise Length (in nights):</label>
+            <select id="cruise-length" name="cruise-length">
+                <option value="2">2 Nights</option>
+                <option value="3">3 Nights</option>
+                <option value="4">4 Nights</option>
+                <option value="5">5 Nights</option>
+                <option value="6">6 Nights</option>
+                <option value="7">7 Nights</option>
+                <option value="10">10 Nights</option>
+            </select>
+            <br>
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

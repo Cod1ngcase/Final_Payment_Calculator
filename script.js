@@ -9,7 +9,22 @@ function calculateDate() {
     }
     
     let date = new Date(cruiseDate);
-    date.setDate(date.getDate() - parseInt(cruiseLength));
+    let daysToSubtract = 0;
+
+    // Determine the number of days to subtract based on cruise length
+    if (cruiseLength >= 2 && cruiseLength <= 5) {
+        daysToSubtract = 76;
+    } else if (cruiseLength >= 6 && cruiseLength <= 7) {
+        daysToSubtract = 91;
+    } else if (cruiseLength == 10) {
+        daysToSubtract = 121;
+    } else {
+        alert("Invalid cruise length selected.");
+        return;
+    }
+
+    // Subtract the determined days from the cruise date
+    date.setDate(date.getDate() - daysToSubtract);
 
     // Array of abbreviated month names
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -22,4 +37,3 @@ function calculateDate() {
     resultDiv.innerHTML = "<strong>Final Payment Due:</strong> " + formattedDate;
     resultDiv.style.display = "block";
 }
-

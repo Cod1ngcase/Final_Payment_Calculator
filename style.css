@@ -1,11 +1,13 @@
-body {
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f4f4f4;
 }
+
 .container {
     background: white;
     padding: 20px;
@@ -14,6 +16,7 @@ body {
     width: 300px;
     text-align: center;
 }
+
 .result {
     margin-top: 10px;
     padding: 10px;

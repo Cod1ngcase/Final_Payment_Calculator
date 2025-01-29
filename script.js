@@ -15,6 +15,6 @@ function calculateDate() {
                         date.getDate().toString().padStart(2, '0') + "/" +
                         date.getFullYear();
     
-    resultDiv.innerHTML = "<strong>Final Payment Due on:</strong> " + formattedDate;
+    resultDiv.innerHTML = "<strong>Final Payment Due:</strong> " + formattedDate;
     resultDiv.style.display = "block";
 }

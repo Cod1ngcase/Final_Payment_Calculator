@@ -24,3 +24,18 @@ html, body {
     border-radius: 5px;
     display: none;
 }
+
+h1, h2 {
+    text-align: center; /* Centers the text */
+    color: #333; /* Sets a dark text color */
+}
+
+h1 {
+    font-size: 2em; /* Makes h1 larger */
+    margin-bottom: 20px; /* Adds space below h1 */
+}
+
+h2 {
+    font-size: 1.5em; /* Makes h2 slightly smaller */
+    margin-bottom: 10px; /* Adds space below h2 */
+}
